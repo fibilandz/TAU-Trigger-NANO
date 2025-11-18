@@ -1,0 +1,14 @@
+executable   = Muon0I_postproc.sh
+arguments = $(Proxy_path) $(input_filename)
+Proxy_path = /afs/cern.ch/user/f/fbilandz/.x509up_u150505
++JobFlavour = "workday"
+
+output       = out/DYtoMuTauh_$(input_filename).out
+error        = err/DYtoMuTauh_$(input_filename).err
+log          = myexe.log
+
+request_cpus   = 1
+request_memory = 1024M
+request_disk   = 10G
+
+queue input_filename from Muon0_2024I.txt
